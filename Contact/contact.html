@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!-- Déclaration de type de document -->
+<html lang="fr">
+    <head>
+        <title>Portfolio - Accueil</title>
+        <!-- Titre de la page qui s'affiche dans l'onglet du navigateur -->
+        <meta name="description" content="Cheikh Tidiane NIANG - Etudiant en BUT R&T">
+        <!--Description de la page-->
+        <meta name="keywords" content="cv, reseau, portefolio, cheikh, tidiane, cheikh tidiane, but, r&t, rt, réseaux télécommunication, réseaux télécom , réseau, portfolio,portfolio but, portfolio but rt, portfolio but réseau télécommunication,portfolio but réseau télécom,portfolio, supérieur, portefeuille, compétences,administrateur">
+        <!--Visibilité de la page-->
+        <meta charset="UTF-8">
+        <!-- Déclaration de l'encodage de caractères -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Ajustement de la taille de la page en fonction de la largeur de l'écran -->
+        <link rel="stylesheet" href="contact.css">
+        <!-- Liens vers les feuilles de styles -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+        <!-- bibliothéque icone -->
+        <meta name="author" content="Niang Cheikh Tidiane">
+        <!--Droit d'auteur-->
+    </head>
+    <!--
+                =========================================================
+                Protection it's my web site!!!
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Author           : NIANG Cheikh Tidiane
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Copyright  (c) 2023 - NIANG Cheikh Tidiane
+                =========================================================
+    -->
+    <body>
+        <header>
+                <nav >
+                    <div class="profile">
+                        <img src="../Image/IMG_Profile.jpeg" alt="Image Profile">
+                        <a href="../index.html">Cheikh Tidiane Niang</a>
+                    </div>
+                    
+                    <ul class="navbar__link" id="menu">
+                        <li><a href="../index.html">Accueil</a></li>
+                        <!-- Lien vers la page d'accueil -->
+                        <li><a href="../Profile/profile.html">Profile</a></li>
+                        <!-- Lien vers la page de profile -->
+                        <li><a href="../But_rt/BUT_RT.html">BUT RT</a></li>
+                        <!-- Lien vers la page de BUT -->
+                        <!--<li><a href="../Projet/projet.html">Mes Projets</a></li>-->
+                        <!-- Lien vers la page de mes Projets -->
+                        <li><a href="contact.html">Contact</a></li>
+                        <!-- Lien vers la page de contact-->
+                    </ul>
+                    <img src="../Image/icons.jpg" alt="hamburger menu" class="hamburger_menu">
+                </nav>
+
+                <script>
+                    const hamburgermenu = document.querySelector(".hamburger_menu") /*assigning variables to their class*/
+                    const navbarlink = document.querySelector(".navbar__link")
+        
+                    hamburgermenu.addEventListener('click',()=>{ /*detects a click*/
+                        navbarlink.classList.toggle('mobile-menu')
+                        if (navbarlink.classList.contains('mobile-menu')) {
+                            document.body.style.overflow = "hidden";
+                        } else {
+                            document.body.style.overflow = "";
+                        }
+        
+                    })
+                    </script>
+        </header>
+        <main >
+            <h1>Contact</h1>
+            <form action="submit-form.php" method="post" id="contactForm">
+                
+                <input type="text" id="name" name="name" required placeholder="Nom *">
+                <i class="fa-solid fa-user"></i>
+                <br>
+                <!-- 
+                cette ligne crée un champ de nom de formulaire 
+                qui est lié à l'input suivant à l'aide de l'attribut for
+                -->
+                <input type="email" id="email" name="email" required placeholder="Email *">
+                <i class="fa-solid fa-envelope"></i>
+                <br>
+                <!-- 
+                cette ligne crée un label pour le champ de email de formulaire 
+                qui est lié à l'input suivant à l'aide de l'attribut for
+                -->
+                <textarea id="message" name="message" required placeholder="Message *"></textarea>
+                <i class="fa-solid fa-messages"></i>
+                <p id="word-count">0 mots/300</p>
+
+                <script>
+                var message = document.getElementById("message");
+                var wordCount = document.getElementById("word-count");
+                var maxWords = 300;
+
+                message.addEventListener("input", function() {
+                    var words = this.value.split(" ");
+                    wordCount.innerHTML = words.length-1 + " mots/300";
+
+                    if (words.length > maxWords) {
+                    wordCount.style.color = "red";
+                    message.value = words.slice(0, maxWords).join(" ");
+                    } else {
+                    wordCount.style.color = "black";
+                    }
+                });
+                </script>
+                <br>
+                <!-- 
+                cette ligne crée un label pour le champ de message de formulaire 
+                qui est lié à l'input suivant à l'aide de l'attribut for
+                -->
+                <input type="submit" value="Envoyer" id="envoyer" >
+                <!-- 
+                cette ligne crée un bouton de soumission de formulaire 
+                qui enverra les données saisies au script PHP spécifié dans l'attribut action 
+                lorsque l'utilisateur clique dessus
+                -->
+                <input type="tel" id="phone" name="phone" placeholder="Numéro de téléphone" pattern="[0-9]+">
+                <i class="fas fa-phone-alt"></i>
+                <!-- 
+                    L'expression régulière [0-9]+ signifie qu'il doit y avoir au moins un chiffre 
+                    (0-9) et peut être répété plusieurs fois (+)
+                -->
+
+            </form>
+                <script>
+                    // Récupération des éléments de formulaire
+                    var form = document.getElementById("contactForm");
+                    var nameInput = document.getElementById("name");
+                    var emailInput = document.getElementById("email");
+                    var messageInput = document.getElementById("message");
+
+                    // Fonction de validation du formulaire
+                    function validateForm() {
+                        // Réinitialisation des erreurs
+                        nameInput.setCustomValidity("");
+                        emailInput.setCustomValidity("");
+                        messageInput.setCustomValidity("");
+
+                        // Validation du nom
+                        if (nameInput.value.trim() == "") {
+                            nameInput.setCustomValidity("Veuillez entrer votre nom.");
+                            return false;
+                        }
+
+                        // Validation de l'adresse e-mail
+                        if (emailInput.value.trim() == "") {
+                            emailInput.setCustomValidity("Veuillez entrer votre adresse e-mail.");
+                            return false;
+                        }
+                        var emailRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                        if (!emailRegex.test(emailInput.value)) {
+                            emailInput.setCustomValidity("Veuillez entrer une adresse e-mail valide.");
+                            return false;
+                        }
+
+                        // Validation du message
+                        if (messageInput.value.trim() == "") {
+                            messageInput.setCustomValidity("Veuillez entrer votre message.");
+                            return false;
+                        }
+
+                        // Si tout est valide, soumettre le formulaire
+                        return true;
+                    }
+
+                    // Soumission du formulaire
+                    form.addEventListener("submit", function(event) {
+                        event.preventDefault();
+                        if (validateForm()) {
+                            // Envoi des données au script de traitement côté serveur
+                            var xhr = new XMLHttpRequest();
+                            xhr.open("POST", "submit-form.php");
+                            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                            xhr.send("name=" + nameInput.value + "&email=" + emailInput.value + "&message=" + messageInput.value);
+                        }
+                    });
+                </script>
+        </main>
+        <footer>
+                <p>Copyright &copy; 2023 - tidi</p>
+                <!-- Copyright et année -->
+        </footer>
+    </body>
+</html>

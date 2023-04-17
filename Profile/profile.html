@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<!-- Déclaration de type de document -->
+<html lang="fr">
+  <head>
+    <title>Portfolio - Accueil</title>
+    <!-- Titre de la page qui s'affiche dans l'onglet du navigateur -->
+    <meta name="description" content="Cheikh Tidiane NIANG - Etudiant en BUT R&T">
+    <!--Description de la page-->
+    <meta name="keywords" content="cv, reseau, portefolio, cheikh, tidiane, cheikh tidiane, but, r&t, rt, réseaux télécommunication, réseaux télécom , réseau, portfolio,portfolio but, portfolio but rt, portfolio but réseau télécommunication,portfolio but réseau télécom,portfolio, supérieur, portefeuille, compétences,administrateur">
+    <!--Visibilité de la page-->
+    <meta charset="UTF-8">
+    <!-- Déclaration de l'encodage de caractères -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ajustement de la taille de la page en fonction de la largeur de l'écran -->
+    <link rel="stylesheet" href="profile.css">
+    <!-- Liens vers les feuilles de styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap" rel="stylesheet">
+    <!-- Paragrphe-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    <!-- bibliothéque icone -->
+    <meta name="author" content="Niang Cheikh Tidiane">
+    <!--Droit d'auteur-->
+  </head>
+<!--
+            =========================================================
+            Protection it's my web site!!!
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Author           : NIANG Cheikh Tidiane
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Copyright  (c) 2023 - NIANG Cheikh Tidiane
+            =========================================================
+-->
+<body>
+  
+    <header>
+            <nav >
+            <div class="profile">
+                <img src="../Image/IMG_Profile.jpeg" alt="Image Profile">
+                <a href="../index.html">Cheikh Tidiane Niang</a>
+            </div>
+            
+            <ul class="navbar__link" id="menu">
+                <li><a href="../index.html">Accueil</a></li>
+                <!-- Lien vers la page d'accueil -->
+                <li><a href="profile.html">Profile</a></li>
+                <!-- Lien vers la page de profile -->
+                <li><a href="../But_rt/BUT_RT.html">BUT RT</a></li>
+                <!-- Lien vers la page de BUT -->
+            <!--<li><a href="../Projet/projet.html">Mes Projets</a></li>-->
+                <!-- Lien vers la page de mes Projets -->
+                <li><a href="../Contact/contact.html">Contact</a></li>
+                <!-- Lien vers la page de contact -->
+            </ul>
+            <img src="../Image/icons.jpg" alt="hamburger menu" class="hamburger_menu">
+            </nav>
+            <script>
+            const hamburgermenu = document.querySelector(".hamburger_menu") /*assigning variables to their class*/
+            const navbarlink = document.querySelector(".navbar__link")
+
+            hamburgermenu.addEventListener('click',()=>{ /*detects a click*/
+                navbarlink.classList.toggle('mobile-menu')
+                if (navbarlink.classList.contains('mobile-menu')) {
+                    document.body.style.overflow = "hidden";
+                } else {
+                    document.body.style.overflow = "";
+                }
+
+            })
+            </script>
+    </header>
+
+    <section class="titre">
+        <h1>Profile</h1>
+    </section>
+
+    <main >
+        
+        <section class="page_content">
+            <div class="text">
+                <ul id="first">
+                    <li>A propos de moi</li>
+                </ul>
+                <p>
+                    Je suis ravi de pouvoir partager davantage d'informations sur moi-même.<br> 
+                    Je m'appelle Cheikh Tidiane NIANG et je suis né en 2003. 
+                    Je suis originaire du Sénégal, où j'ai passé la majorité de ma vie 
+                    avant de venir étudier en France. Je poursuis actuellement mes études 
+                    supérieures à l'Université de Sorbonne Paris Nord, en première année de 
+                    <a href="../But_rt/BUT_RT.html">BUT R&T (Réseaux et Télécommunications).</a><br>
+                    Ma passion pour l'informatique et les nouvelles technologies remonte 
+                    à mon enfance, où j'ai commencé à m'intéresser à l'utilisation des 
+                    ordinateurs et à la programmation. J'ai continué à cultiver cet 
+                    intérêt tout au long de mes années d'études secondaires, en suivant 
+                    une spécialisation en Mathématiques et Informatique numérique (NSI) au lycée.<br>
+                    Je suis très enthousiaste à l'idée d'explorer davantage ce domaine 
+                    passionnant au cours de mes études en BUT R&T. J'espère pouvoir acquérir les 
+                    compétences et les connaissances nécessaires pour réussir dans cette 
+                    industrie en constante évolution. <br>En dehors de mes études, j'aime également 
+                    passer du temps à faire du basket.
+                </p>
+                
+                <ul>
+                    <li>Projet professionnel</li>
+                </ul>
+                <p>
+                    Mon objectif est de devenir Ingénieur en Cybersécurité, car je suis convaincu 
+                    que la sécurité des données est un enjeu crucial de notre société de plus en plus connectée.<br>
+                    À cet égard, je suis déterminé à mettre mes compétences et ma passion au service d'une 
+                    entreprise, où je pourrais participer activement à la construction et au développement de 
+                    celle-ci. J'aimerais donc passer ma deuxième année de BUT en alternance, afin 
+                    de participer concrètement à la croissance de l'entreprise en apportant mes compétences et 
+                    ma motivation.<br>
+                    En tant que Technicien , je serais responsable de la mise en place et de 
+                    l'exploitation de réseaux informatiques et de télécommunications. Je serais également chargé d'accompagné
+                    un administrateur dans la gestion et dans l'administration d'un parc réseaux, en veillant à ce qu'ils fonctionnent 
+                    efficacement et en intervenant en cas d'incidents pour les résoudre rapidement. Mon rôle 
+                    consisterait également à garantir la sécurité de l'Internet et à prévenir les attaques 
+                    informatiques.<br>
+                    Je suis convaincu que ce travail est extrêmement important et j'espère avoir l'opportunité 
+                    de contribuer à une entreprise qui valorise la sécurité de l'information et qui cherche à 
+                    offrir des solutions de pointe pour répondre aux défis de la cybersécurité.
+                </p>
+
+                <ul>
+                    <li>MES QUALITES</li>
+                </ul>
+                <h2>Réactif</h2>
+                    <p>La réactivité permet une résolution rapide des problèmes</p>
+                <h2>Persévérant</h2>
+                    <p>La persévérance est un fait fastidieux et long parfois, 
+                        mais qui est récompensée par la satisfaction d'avoir réussi</p>
+                <h2>Autonome</h2>
+                    <p>L'autonomie permet de mettre des solutions en place sans avoir 
+                        besoin d'être assisté</p>
+                
+                <ul>
+                    <li>Mes compétences</li>
+                </ul>
+            </div>
+            <div class="container ">
+                <div class="set_div">
+                    <h2>Compétences aquises</h2>
+                    <p>
+                        Toutes ces connaissances ont été acquises de différentes façons. 
+                        Elles ont été acquises durant mes études et d'autres par ma 
+                        propre initiative en essayant de mettre en place des solutions. 
+                        J’ai également relevé les défis organisés, ce qui permet 
+                        d’effectuer des recherches et aller encore plus loin.
+                    </p>
+                        
+                    <h2>Programmation</h2>
+                    <p>
+                        La programmation est une compétence très utile et importante, 
+                        elle nous permet de nous donner un ordre d'idée de fonctionnement 
+                        d'une solution. La programmation informatique est l'écriture de 
+                        programmes servant à créer un logiciel. Un programme contient 
+                        l'ensemble des informations nécessaires pour que le logiciel 
+                        remplisse sa tâche. 
+                    </p>
+                </div>
+                <div class="prog_barre">
+                    <h4>Systèmes d'exploitation :</h4>
+                    <div class="linux">
+                        <div class="info">
+                            <span>Linux (Debian, Ubuntu, CentOS)</span>
+                            <span>60%</span>
+                        </div>
+                    </div>
+                    <div class="ligne Linux"></div>
+                        
+
+
+                    <h4>Programmation :</h4>
+                    <div class="HTML">
+                        <div class="info">
+                            <span>HTML</span>
+                            <span>60%</span>
+                        </div>
+                    </div>
+                    <div class="ligne html"></div>
+
+                    <br>
+
+                    <div class="CSS">
+                        <div class="info">
+                            <span>CSS</span>
+                            <span>50%</span>
+                        </div>
+                    </div>
+                    <div class="ligne css"></div>
+                        
+                    <br>
+
+                    <div class="C">
+                        <div class="info">
+                            <span>C</span>
+                            <span>30%</span>
+                        </div>
+                    </div>
+                    <div class="ligne c"></div>
+
+                        
+
+
+                    <h4>Scripting :</h4>
+                    <div class="Python">
+                        <div class="info">
+                            <span>Python</span>
+                            <span>70%</span>
+                        </div>
+                    </div>
+                    <div class="ligne python"></div>
+                    <br>
+
+                    <div class="Bash">
+                        <div class="info">
+                            <span>Bash/Batch</span>
+                            <span>30%</span>
+                        </div>
+                    </div>
+                    <div class="ligne bash"></div>
+                    <br>
+                    
+                </div>
+            </div>
+            <br>
+            <a href="../Image/CV_Tidiane-1.pdf" download id="cv">Télécharger mon CV</a>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2023 - tidi</p>
+        <!-- Copyright et année -->
+    </footer>
+</body>
+</html>

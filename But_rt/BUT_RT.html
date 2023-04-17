@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!-- Déclaration de type de document -->
+<html>
+  <head>
+    <title>Portfolio - Accueil</title>
+    <!-- Titre de la page qui s'affiche dans l'onglet du navigateur -->
+    <meta name="description" content="Cheikh Tidiane NIANG - Etudiant en BUT R&T">
+    <!--Description de la page-->
+    <meta name="keywords" content="cv, reseau, portefolio, cheikh, tidiane, cheikh tidiane, but, r&t, rt, réseaux télécommunication, réseaux télécom , réseau, portfolio,portfolio but, portfolio but rt, portfolio but réseau télécommunication,portfolio but réseau télécom,portfolio, supérieur, portefeuille, compétences,administrateur">
+    <!--Visibilité de la page-->
+    <meta charset="UTF-8">
+    <!-- Déclaration de l'encodage de caractères -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ajustement de la taille de la page en fonction de la largeur de l'écran -->
+    <link rel="stylesheet" href="BUT_RT.css">
+    <!-- Liens vers les feuilles de styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap" rel="stylesheet">
+    <!--Paragraphe-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+    
+    <!-- bibliothéque icone -->
+    <meta name="author" content="Niang Cheikh Tidiane">
+    <!--Droit d'auteur-->
+  </head>
+<!--
+            =========================================================
+            Protection it's my web site!!!
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Author           : NIANG Cheikh Tidiane
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Copyright  (c) 2023 - NIANG Cheikh Tidiane
+            =========================================================
+-->
+<body>
+    <header>
+            <nav >
+            <div class="profile">
+                <img src="../Image/IMG_Profile.jpeg" alt="Image Profile">
+                <a href="../index.html">Cheikh Tidiane Niang</a>
+            </div>
+            
+            <ul class="navbar__link" id="menu">
+              <li><a href="../index.html">Accueil</a></li>
+              <!-- Lien vers la page d'accueil -->
+              <li><a href="../Profile/profile.html">Profile</a></li>
+              <!-- Lien vers la page de profile -->
+              <li><a href="BUT_RT.html">BUT RT</a></li>
+              <!--<li><a href="../Projet/projet.html">Mes Projets</a></li>-->
+              <!-- Lien vers la page de mes Projets -->
+              <!-- Lien vers la page de BUT -->
+              <li><a href="../Contact/contact.html">Contact</a></li>
+              <!-- Lien vers la page de contact -->
+            </ul>
+            <img src="../Image/icons.jpg" alt="hamburger menu" class="hamburger_menu">
+            </nav>
+            <script>
+            const hamburgermenu = document.querySelector(".hamburger_menu") /*assigning variables to their class*/
+            const navbarlink = document.querySelector(".navbar__link")
+
+            hamburgermenu.addEventListener('click',()=>{ /*detects a click*/
+                navbarlink.classList.toggle('mobile-menu')
+                if (navbarlink.classList.contains('mobile-menu')) {
+                    document.body.style.overflow = "hidden";
+                } else {
+                    document.body.style.overflow = "";
+                }
+
+            })
+            </script>
+    </header>
+
+    <section class="titre">
+      <h1>BUT R&T</h1>
+    </section>
+
+    <main >
+        <section class="page_content">
+          <ul>
+            <li>Qu'est ce que le BUT R&T?</li>
+          </ul>
+          <p>
+            Le Bachelore Universitaire de Technologies (BUT) est un formation
+            en 3 ans qui donne le grade de licence. <br> Le BUT R&T forme les étudiants
+            aux technologies des réseaux (réseaux d’entreprises, réseaux fixes et 
+            mobiles des opérateurs de télécommunications, Internet), à l’informatique, 
+            aux télécommunications (traitement du signal, systèmes de communications 
+            numériques WIFI, ADSL/VDSL, 4G/5G...) et de manière transversale à la 
+            cybersécurité. L’objectif est d’acquérir un solide bagage technologique 
+            associant théorie et pratique (plus de 50 % des cours sont des travaux 
+            pratiques).<br>Les concepts mathématiques et physiques sont amenés progressivement 
+            tout au long de la formation en fonction de la technologie étudiée.
+            <br>
+            <br>
+            Le BUT spécialité réseaux et télécommunications est assorti d’un volume 
+            horaire global de 2.000 heures sur les trois ans et 600 heures de projets 
+            tutorés.
+            <br>
+            En tout, cinq compétences sont à acquérir en BUT réseaux et télécommunications, 
+            dont 3 sont communes à tous les parcours.
+            <br>
+            <br>
+            Chaque compétence se décline en savoir-faire, eux-mêmes découpés en situations 
+            professionnelles. Nous donnons ici la compétence et son savoir-faire 
+            associé et nous vous invitons à vous reporter au référentiel pour plus de détails.
+            
+          </p>
+
+          <ul>
+            <li>Spécialisation 2éme année</li>
+          </ul>
+          <p id="attention">
+            Avant de choisir son école, il est important de noter que toutes les 
+            spécialisations ne sont pas disponibles dans tous les IUT. Il est donc essentiel 
+            de bien s'informer au préalable. Voici les spécialités possibles : 
+          </p>
+
+          <br>
+          <br>
+
+          <ul id="nbr1">
+            <li>1. Parcours cybersécurité</li>
+          </ul>
+          <p>
+            <ul id="nbr2">
+              <li>Sécuriser : administrer un système d’information sécurisé</li>
+              <li>Surveiller : surveiller un système d’information sécurisé</li>
+            </ul>
+          </p>
+
+          <ul id="nbr1">
+            <li>2. Parcours développement système et Cloud</li>
+          </ul>
+          <p>
+            <ul id="nbr2">
+              <li>Orchestrer : coordonner des infrastructures modulaires</li>
+              <li>Développer : accompagner le développement d’applications</li>
+            </ul>
+          </p>
+
+          <ul id="nbr1">
+            <li>3. Parcours IOM (Internet des objets et mobilité)</li>
+          </ul>
+          <p>
+            <ul id="nbr2">
+              <li>Etendre : gérer les infrastructures des réseaux mobiles</li>
+              <li>Exploiter : mettre en œuvre des applications et des protocoles sécurisés pour l’Internet des Objets</li>
+            </ul>
+          </p>
+
+          <ul id="nbr1">
+            <li>4. Parcours PIPRO (pilotage de projets et réseaux)</li>
+          </ul>
+          <p>
+            <ul id="nbr2">
+              <li>Piloter : mettre en œuvre des projets techniques et réglementaires des R&T dans son activité</li>
+              <li>Organiser : gérer des activités réseaux et télécommunications en termes organisationnels, relationnels, 
+                financiers et commerciaux</li>
+            </ul>
+          </p>
+
+          <ul id="nbr1">
+            <li>5. Parcours ROM (réseaux opérateurs et multimédia)</li>
+          </ul>
+          <p>
+            <ul id="nbr2">
+              <li>Rapprocher : gérer les infrastructures et les services des réseaux opérateurs</li>
+              <li>Unifier : gérer les communications unifiées et la vidéo sur Internet</li>
+            </ul>
+          </p>
+          <li id="sortie"><a href="https://www.letudiant.fr/etudes/dut/but-r-t-reseaux-et-telecommunications-ex-dut-r-t.html">En savoir plus</a></li>
+          <br>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2023 - tidi</p>
+        <!-- Copyright et année -->
+    </footer>
+</body>
+</html>

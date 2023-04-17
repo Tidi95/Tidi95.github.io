@@ -1,0 +1,244 @@
+/* 
+   =====================================================
+   Styles pour la page web
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Author           : tidi
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Copyright  (c) 2023 - tidi
+   =====================================================
+*/
+
+/* 
+   -------------------
+   Sélecteurs généraux
+   -------------------
+*/
+
+/* Réinitialisation des styles par défaut pour tous les éléments */
+* {
+    margin: 0; /* Supprimer les marges */
+    padding: 0; /* Supprimer les espacements */
+    box-sizing: border-box; /* Conserver la taille de boîte */
+  }
+
+  /*
+    -------------------
+    Image de font
+    -------------------
+  */
+  body {
+    padding: 0; /* Supprimer les espacements intérieurs */
+    width: 100%; /* Remplir toute la largeur de la fenêtre */
+    height: 100vh; /* Remplir toute la hauteur de la fenêtre */
+    background: url('../Image/Enjeux-WAVETEL-solutions-inedites-au-services-des-reseau-et-telecom.jpg') no-repeat; /* Ajouter une image de fond */
+    background-size: cover; /* Ajuster la taille de l'image pour qu'elle remplisse toute la zone */
+    background-position: center; /* Centrer l'image */
+
+  }
+  
+  /* 
+     -------------------
+     Header
+     -------------------
+  */
+  
+  header {
+    /* Définir la couleur de fond pour le header */
+    background-color: #f5f5f5; 
+  }
+  
+  /* 
+     -------------------
+     Barre de navigation
+     -------------------
+  */
+  
+  nav {
+    display: flex;/* Permettre d'afficher les éléments en ligne */  
+    justify-content: space-between; /* Permettre d'aligner les éléments sur la ligne */
+    height: 50px; /* Donner une hauteur de 50px au menu */
+  }
+  
+  nav ul {
+    display: flex; /* Permettre d'afficher les éléments de la liste en ligne */
+    list-style: none; /* Supprimer les marqueurs de liste */
+    align-items: center;
+
+    
+  }
+  
+  nav ul li {
+    /* Ajouter un espace entre les éléments de la liste dans la navigation */
+    margin-right: 20px; 
+    text-align: right;
+  }
+
+  nav ul li a {
+    text-decoration: none;/*supprimer le soulignement des liens*/
+    color: black;
+    border-bottom: 2px solid #ffffff00; /*Mettre une bordure a chaque lien*/
+  }
+
+  nav ul li a:hover {
+    border-bottom: 2px solid #2314a3; /*Mettre une bordure a chaque lien*/
+    transition: all 0.5s ease;
+  }
+
+  nav .profile {
+    display: flex;
+    align-items: center;
+  }
+
+  nav .profile img {
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /*arrondir les bords*/
+  }
+
+  nav .profile a {
+    margin-left: 15px;
+    font-size: 18px;
+    text-decoration: none;/*supprimer le soulignement des liens*/
+    border-bottom: 2px solid #ffffff00; /*Mettre une bordure a chaque lien*/
+    color: black;
+  }
+
+  nav .profile a:hover{
+    border-bottom: 2px solid #2314a3; /*Mettre une bordure a chaque lien*/
+    transition: all 0.5s ease;
+  }
+
+  nav .hamburger_menu {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    top: 8px;
+    right: 30px;
+    width: 40px;
+    border-radius: 50%; /*round the edges*/
+  }
+
+  
+
+  /*Display*/
+  /*Only applies when the width <= 1000px*/
+  /*Responsive menu*/
+  @media screen and (max-width: 1000px) {
+    nav .hamburger_menu {
+        display: block;
+    }
+    
+    .navbar__link {
+      top: 0;
+      left: 0;
+      position: absolute;
+      z-index: 9998;
+      background-color: rgba(236, 228, 228, 0.753);
+      backdrop-filter: blur(5px); /*blur the background*/
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: -100%;
+      transition: all 0.5s ease;
+    }
+
+    .navbar__link.mobile-menu {
+      margin-left: 0;
+      border-radius: 20px;
+      overflow: hidden;
+      overflow-x: hidden;
+      overflow-y: hidden;
+    }
+
+  
+  }
+  
+  /* 
+     -------------------
+     Main
+     -------------------
+  */
+  
+  main h1 {
+    /* Définir la largeur maximale pour la section principale */
+    max-width: 1200px; 
+    /* Centrer la section principale horizontalement */
+    margin: 0 auto; 
+    /*Centrer les éléments*/
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 4vw;
+  }
+
+  main form {
+    background-color: rgba(56, 75, 161, 0.329);
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 3%;
+  }
+
+
+  main form input {
+    display: inline-block;
+    margin-right: 10px;
+    height: 40px;
+    margin-top: 20px;
+    width: 40%;
+    height: 40px;
+    padding-left: 15px;
+  }
+
+  main form #envoyer {
+    position: absolute;
+    left: 30%;
+    bottom: 10px;
+    max-width: 400px;
+    font-size: 30px;
+  }
+
+  main form #envoyer:hover {
+    background-color: rgba(19, 76, 151, 0.76);
+    color: aliceblue;
+    transition: all 0.5s ease;
+  }
+
+  main form #message{
+    resize: none;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    margin-left: 10px;
+    padding-left: 15px;
+    padding-top: 15px;
+  }
+  
+  main form p {
+    position: absolute;
+    right: 0;
+    top:  54%;
+    background-color: #f5f5f5;
+  }
+  
+  /* 
+     -------------------
+     Footer
+     -------------------
+  */
+  footer {
+    background-color: #f5f5f5; /* Définir la couleur de fond pour le pied de page */
+    text-align: center; /* Centrer le texte dans le pied de page */
+    position: absolute; /* Positionner le footer en absolu par rapport à son parent */
+    bottom: 0; /* Placer le footer en bas de la page */
+    width: 100%; /* Faire en sorte que le footer remplisse toute la largeur de la page */
+  }
